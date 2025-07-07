@@ -10,29 +10,54 @@ const saveLogs = (logs) => {
   fs.writeFileSync(LOG_FILE, JSON.stringify(logs, null, 2), 'utf-8');
 };
 
-const isValidLog = (log) => {
-  const levels = ['error', 'warn', 'info', 'debug'];
-
-  return (
-    log &&
-    typeof log === 'object' &&
-    levels.includes(log.level) &&
-    typeof log.message === 'string' &&
-    typeof log.resourceId === 'string' &&
-    typeof log.timestamp === 'string' &&
-    !isNaN(Date.parse(log.timestamp)) &&
-    typeof log.traceId === 'string' &&
-    typeof log.spanId === 'string' &&
-    typeof log.commit === 'string' &&
-    typeof log.metadata === 'object'
-  );
-};
 
 const postLogs = (req, res) => {
   const log = req.body;
 
-  if (!isValidLog(log)) {
-    return res.status(400).json({ error: 'Invalid log format' });
+
+  // Validate individual fields
+  if (!log || typeof log !== 'object') {
+    return res.status(400).json({ error: 'Log must be a JSON object' });
+  }
+
+  if (!log.level || typeof log.level !== 'string') {
+    return res.status(400).json({ error: 'Missing or invalid "level" (must be a string)' });
+  }
+
+  if (!levels.includes(log.level)) {
+    return res.status(400).json({ error: `"level" must be one of: ${levels.join(', ')}` });
+  }
+
+  if (!log.message || typeof log.message !== 'string') {
+    return res.status(400).json({ error: 'Missing or invalid "message" (must be a string)' });
+  }
+
+  if (!log.resourceId || typeof log.resourceId !== 'string') {
+    return res.status(400).json({ error: 'Missing or invalid "resourceId" (must be a string)' });
+  }
+
+  if (!log.timestamp || typeof log.timestamp !== 'string') {
+    return res.status(400).json({ error: 'Missing or invalid "timestamp" (must be a string)' });
+  }
+
+  if (isNaN(Date.parse(log.timestamp))) {
+    return res.status(400).json({ error: '"timestamp" must be a valid ISO date string' });
+  }
+
+  if (!log.traceId || typeof log.traceId !== 'string') {
+    return res.status(400).json({ error: 'Missing or invalid "traceId" (must be a string)' });
+  }
+
+  if (!log.spanId || typeof log.spanId !== 'string') {
+    return res.status(400).json({ error: 'Missing or invalid "spanId" (must be a string)' });
+  }
+
+  if (!log.commit || typeof log.commit !== 'string') {
+    return res.status(400).json({ error: 'Missing or invalid "commit" (must be a string)' });
+  }
+
+  if (!log.metadata || typeof log.metadata !== 'object' || Array.isArray(log.metadata)) {
+    return res.status(400).json({ error: 'Missing or invalid "metadata" (must be an object)' });
   }
 
   const logs = readLogs();
