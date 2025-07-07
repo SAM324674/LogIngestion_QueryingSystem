@@ -1,0 +1,232 @@
+[
+  {
+    "level": "info",
+    "message": "User logged in",
+    "resourceId": "server-1",
+    "timestamp": "2025-07-05T15:00:00Z",
+    "traceId": "abc",
+    "spanId": "def",
+    "commit": "123abc",
+    "metadata": {
+      "parentResourceId": "server-2"
+    }
+  },
+  {
+    "level": "error",
+    "message": "Failed to connect to database",
+    "resourceId": "server-1",
+    "timestamp": "2025-07-05T10:01:00Z",
+    "traceId": "trace-001",
+    "spanId": "span-001",
+    "commit": "c0ffee1",
+    "metadata": {
+      "parentResourceId": "server-0"
+    }
+  },
+  {
+    "level": "info",
+    "message": "User logged in successfully",
+    "resourceId": "auth-service",
+    "timestamp": "2025-07-05T09:45:30Z",
+    "traceId": "trace-002",
+    "spanId": "span-002",
+    "commit": "c0ffee2",
+    "metadata": {
+      "userId": "123"
+    }
+  },
+  {
+    "level": "warn",
+    "message": "Payment gateway timeout",
+    "resourceId": "payment-service",
+    "timestamp": "2025-07-05T11:00:00Z",
+    "traceId": "trace-003",
+    "spanId": "span-003",
+    "commit": "c0ffee3",
+    "metadata": {
+      "retryCount": 3
+    }
+  },
+  {
+    "level": "debug",
+    "message": "Debugging session started",
+    "resourceId": "dev-env",
+    "timestamp": "2025-07-05T08:00:00Z",
+    "traceId": "trace-004",
+    "spanId": "span-004",
+    "commit": "c0ffee4",
+    "metadata": {}
+  },
+  {
+    "level": "info",
+    "message": "New order placed",
+    "resourceId": "order-service",
+    "timestamp": "2025-07-04T14:22:00Z",
+    "traceId": "trace-005",
+    "spanId": "span-005",
+    "commit": "c0ffee5",
+    "metadata": {
+      "orderId": "ORD123"
+    }
+  },
+  {
+    "level": "error",
+    "message": "Unhandled exception in cart module",
+    "resourceId": "cart-service",
+    "timestamp": "2025-07-03T18:12:12Z",
+    "traceId": "trace-006",
+    "spanId": "span-006",
+    "commit": "c0ffee6",
+    "metadata": {}
+  },
+  {
+    "level": "warn",
+    "message": "Slow response from inventory API",
+    "resourceId": "inventory-service",
+    "timestamp": "2025-07-02T17:40:00Z",
+    "traceId": "trace-007",
+    "spanId": "span-007",
+    "commit": "c0ffee7",
+    "metadata": {}
+  },
+  {
+    "level": "info",
+    "message": "Inventory updated successfully",
+    "resourceId": "inventory-service",
+    "timestamp": "2025-07-01T12:00:00Z",
+    "traceId": "trace-008",
+    "spanId": "span-008",
+    "commit": "c0ffee8",
+    "metadata": {}
+  },
+  {
+    "level": "debug",
+    "message": "Trace headers: spanId=abc123",
+    "resourceId": "tracer",
+    "timestamp": "2025-07-05T13:00:00Z",
+    "traceId": "trace-009",
+    "spanId": "span-009",
+    "commit": "c0ffee9",
+    "metadata": {}
+  },
+  {
+    "level": "error",
+    "message": "Database schema mismatch detected",
+    "resourceId": "db-service",
+    "timestamp": "2025-07-05T07:30:00Z",
+    "traceId": "trace-010",
+    "spanId": "span-010",
+    "commit": "c0ffeed",
+    "metadata": {}
+  },
+  {
+    "level": "info",
+    "message": "User profile updated",
+    "resourceId": "user-service",
+    "timestamp": "2025-07-05T11:50:00Z",
+    "traceId": "trace-011",
+    "spanId": "span-011",
+    "commit": "c0ffeeb",
+    "metadata": {}
+  },
+  {
+    "level": "warn",
+    "message": "Deprecated API call detected",
+    "resourceId": "legacy-api",
+    "timestamp": "2025-07-05T12:05:00Z",
+    "traceId": "trace-012",
+    "spanId": "span-012",
+    "commit": "c0ffeec",
+    "metadata": {}
+  },
+  {
+    "level": "info",
+    "message": "Daily analytics job finished",
+    "resourceId": "analytics-service",
+    "timestamp": "2025-07-05T01:00:00Z",
+    "traceId": "trace-013",
+    "spanId": "span-013",
+    "commit": "c0ffeea",
+    "metadata": {}
+  },
+  {
+    "level": "debug",
+    "message": "Auth token verified",
+    "resourceId": "auth-service",
+    "timestamp": "2025-07-05T02:00:00Z",
+    "traceId": "trace-014",
+    "spanId": "span-014",
+    "commit": "c0ffeef",
+    "metadata": {}
+  },
+  {
+    "level": "error",
+    "message": "Failed to send notification",
+    "resourceId": "notification-service",
+    "timestamp": "2025-07-05T15:00:00Z",
+    "traceId": "trace-015",
+    "spanId": "span-015",
+    "commit": "c0ffeed",
+    "metadata": {}
+  },
+  {
+    "level": "info",
+    "message": "User password reset",
+    "resourceId": "auth-service",
+    "timestamp": "2025-07-05T16:20:00Z",
+    "traceId": "trace-016",
+    "spanId": "span-016",
+    "commit": "c0ffeee",
+    "metadata": {}
+  },
+  {
+    "level": "warn",
+    "message": "Third-party API quota near limit",
+    "resourceId": "external-service",
+    "timestamp": "2025-07-05T17:30:00Z",
+    "traceId": "trace-017",
+    "spanId": "span-017",
+    "commit": "c0ffeeb",
+    "metadata": {}
+  },
+  {
+    "level": "error",
+    "message": "Payment gateway internal error",
+    "resourceId": "payment-service",
+    "timestamp": "2025-07-05T18:00:00Z",
+    "traceId": "trace-018",
+    "spanId": "span-018",
+    "commit": "c0ffeed",
+    "metadata": {}
+  },
+  {
+    "level": "info",
+    "message": "Promotional email sent",
+    "resourceId": "email-service",
+    "timestamp": "2025-07-05T19:00:00Z",
+    "traceId": "trace-019",
+    "spanId": "span-019",
+    "commit": "c0ffeef",
+    "metadata": {}
+  },
+  {
+    "level": "debug",
+    "message": "Debugging payment retry logic",
+    "resourceId": "payment-service",
+    "timestamp": "2025-07-05T20:00:00Z",
+    "traceId": "trace-020",
+    "spanId": "span-020",
+    "commit": "c0ffee1",
+    "metadata": {}
+  },
+  {
+    "level": "error",
+    "message": "payment failed",
+    "resourceId": "payment-service",
+    "timestamp": "2025-07-05T20:00:00Z",
+    "traceId": "trace-020",
+    "spanId": "span-020",
+    "commit": "c0ffee1",
+    "metadata": {}
+  }
+]
