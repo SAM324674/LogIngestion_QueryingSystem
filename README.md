@@ -45,6 +45,12 @@ This is a fullstack developer assessment project which implements a developer to
             | `commit`          | string   | Match commit hash                |
 
 ---
+## 📸 Demo Screenshots
+
+### 🧾 Log Query UI
+[Query UI](./frontend//src/assets/images/Screenshot%202025-07-07%20124919.png)
+[Log List](./frontend/src/assets/images/image.png)
+
 ## 🧪 How to Run
 
 ### 1. Clone the repo
