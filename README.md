@@ -58,26 +58,26 @@ This is a fullstack developer assessment project which implements a developer to
 
 ### 1. Clone the repo
 
-    ``` bash
+    ``` 
     git clone https://github.com/SAM324674/LogIngestion_QueryingSystem.git
     cd log-query-system
     ```
 
 ### 2.  Install backend dependencies
-    ``` bash
+    ``` 
     cd backend
     npm install
     ```
 ### 3. Start backend server
-    ```bash
+    ```
         npm run dev
     ```
 ### 4. Install frontend dependencies
-    ```bash  
+    ```
     cd ../frontend
     npm install
     ```
 ### 5. Start frontend server
-    ```bash
+    ```
         npm run dev 
     ```
